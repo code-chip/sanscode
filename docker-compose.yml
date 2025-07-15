@@ -1,5 +1,6 @@
 services:
   react:
+    restart: always
     container_name: ${PROJECT_NAME}_react
     build:
       context: .
@@ -11,3 +12,4 @@ services:
     working_dir: /app
     stdin_open: true
     tty: true
+    command: ["npm", "run", "dev"]
